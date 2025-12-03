@@ -1,3 +1,1 @@
-# sachinallums.github.io
-
-Current Stanford Student passionate about education and research. This website is undergoing construction right now, so check back later!
+Current Researcher and Fulbright Scholar. This website is undergoing construction right now, so check back later!
