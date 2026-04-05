@@ -121,10 +121,36 @@ footer {
     border-top: 1px solid #ddd;
 }
 
+/* Active tab styling */
+.nav-right a.active {
+    color: #007acc;
+}
+
+.nav-right a.active::after {
+    width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         text-align: center;
     }
+}
+
+.cv-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.cv-button:hover {
+    background: #005f99;
+    transform: translateY(-2px);
 }
