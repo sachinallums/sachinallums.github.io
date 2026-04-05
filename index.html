@@ -1,50 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin Allums</title>
-    <link href="styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="container-row">
-        <img class="profile-pic" src="assets/profile-pic.jpeg" alt="Profile Picture" width="300">
-        <div class="text-column">
-          <h2 class="text-row">Sachin Allums</h2>
-          <div class="text-row">Aspiring Educator and Researcher passionate about</div>
-          <div class="text-row">social justice in both technology and the classroom</div>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="nav-left">
+            <h1>Sachin Allums</h1>
+            <p class="contact">sachin@example.com | GitHub | LinkedIn</p>
         </div>
-      </div>
-  </div>
-    <header class="main-header">
-      <nav class="nav main-nav">
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="projects.html">Projects</a></li>
-        </ul>
-      </nav>
-    
-    </header>
-    <h2>Bio</h2>
-    <p>Born and raised in Austin, Texas, I have spent my whole life loving tacos, 
-      live music, and swimming. In my free time, you can find me in the pool, 
-      playing the string bass, baking bread and pastries, reading the news, or 
-      playing the latest New York Times word game. I love doing activities with 
-      other people, and this translates into seeing a ton of artists in concert, 
-      going on hikes, and playing ping pong frequently. I am a current Stanford 
-      student studying Symbolic Systems (Stanford’s flavor of cognitive science) 
-      with a minor in Education. I am writing my Honors Thesis in Education, and 
-      I am interested in pursuing my PhD in the Learning Sciences. In the future, 
-      I hope to focus my research on incorporating technology and game design into 
-      the classroom to facilitate creativity and imaginative play in children.</p>
-    <h2>Education</h2>
-    <p>B.S., Symbolic Systems, Stanford University 2021 - 2025</p>
-    <h2>Honors and Awards</h2>
-    <p>Fulbright South Korea (2025)<br>Phi Beta Kappa (2024)<br>National Merit Scholar (2021)</p>
-    <h2>Contact</h2>
-    <p>sachino@stanford.edu</p>
+
+        <nav class="nav-right">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#publications">Publications</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="container hero fade-in">
+    <h2>Welcome</h2>
+    <p>
+        I am a researcher and educator focused on AI, education, and human development.
+        My work explores how technology shapes creativity, learning, and social interaction.
+    </p>
+</section>
+
+<section id="about" class="container fade-in">
+    <h2>About</h2>
+    <div class="about-content">
+        <img src="images/profile.jpeg" class="profile">
+        <div>
+            <p>
+                I am currently a Fulbright Scholar in South Korea, where I teach English and
+                conduct research on the impact of large language models on student learning.
+            </p>
+            <p>
+                My academic interests include educational technology, creativity research,
+                and human-AI interaction.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="publications" class="container fade-in">
+    <h2>Publications</h2>
+
+    <div class="pub">
+        <p><strong>Allums, S.</strong> (2025). AI and Creativity in Education. <em>Journal of Learning Sciences.</em></p>
+    </div>
+
+    <div class="pub">
+        <p><strong>Allums, S.</strong> (2024). Teaching Social Skills with AI Chat Systems. <em>EdTech Review.</em></p>
+    </div>
+
+</section>
+
+<section id="research" class="container fade-in">
+    <h2>Research</h2>
+
+    <div class="card">
+        <h3>AI & Creativity</h3>
+        <p>Studying how AI tools influence divergent thinking and originality.</p>
+    </div>
+
+    <div class="card">
+        <h3>Social Skills & AI</h3>
+        <p>Designing AI-driven chat environments to improve empathy and communication.</p>
+    </div>
+
+</section>
+
+<section id="teaching" class="container fade-in">
+    <h2>Teaching</h2>
+
+    <div class="card">
+        <h3>English Education (South Korea)</h3>
+        <p>Teaching secondary students with a focus on communication and engagement.</p>
+    </div>
+
+    <div class="card">
+        <h3>Workshops & Curriculum</h3>
+        <p>Developing interactive lessons on AI, media, and language learning.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Sachin Allums</p>
+</footer>
+
+<script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.15
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
 </body>
 </html>
