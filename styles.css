@@ -1,3 +1,6 @@
+/* Import Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Reset */
 * {
     margin: 0;
@@ -6,7 +9,7 @@
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #222;
     background-color: #f8f9fb;
@@ -31,15 +34,15 @@ header {
 }
 
 .nav-left h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .contact {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #666;
 }
 
-/* Nav animation underline */
+/* Nav links */
 .nav-right a {
     margin-left: 20px;
     text-decoration: none;
@@ -63,33 +66,39 @@ header {
     width: 100%;
 }
 
-/* Sections */
+/* Layout */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 60px 20px;
 }
 
-.hero {
-    text-align: center;
-    animation: fadeUp 1s ease forwards;
-}
-
-/* Fade-in base */
+/* Fade animation */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
+    transform: translateY(15px);
+    animation: fadeUp 0.8s ease forwards;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-section h2 {
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* About */
@@ -104,26 +113,6 @@ section h2 {
     border-radius: 50%;
 }
 
-/* Cards with hover animation */
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* Publications */
-.pub {
-    margin-bottom: 15px;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -132,34 +121,8 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-/* Keyframes */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-right {
-        margin-top: 10px;
-    }
-
     .about-content {
         flex-direction: column;
         text-align: center;

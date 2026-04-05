@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin Allums</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,113 +9,30 @@
 
 <header>
     <div class="nav-container">
-        <div class="nav-left">
+        <div>
             <h1>Sachin Allums</h1>
             <p class="contact">sachin@example.com | GitHub | LinkedIn</p>
         </div>
-
         <nav class="nav-right">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#publications">Publications</a>
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="publications.html">Publications</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
         </nav>
     </div>
 </header>
 
-<section id="home" class="container hero fade-in">
+<section class="container fade-in">
     <h2>Welcome</h2>
     <p>
         I am a researcher and educator focused on AI, education, and human development.
-        My work explores how technology shapes creativity, learning, and social interaction.
     </p>
-</section>
-
-<section id="about" class="container fade-in">
-    <h2>About</h2>
-    <div class="about-content">
-        <img src="images/profile.jpeg" class="profile">
-        <div>
-            <p>
-                I am currently a Fulbright Scholar in South Korea, where I teach English and
-                conduct research on the impact of large language models on student learning.
-            </p>
-            <p>
-                My academic interests include educational technology, creativity research,
-                and human-AI interaction.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="publications" class="container fade-in">
-    <h2>Publications</h2>
-
-    <div class="pub">
-        <p><strong>Allums, S.</strong> (2025). AI and Creativity in Education. <em>Journal of Learning Sciences.</em></p>
-    </div>
-
-    <div class="pub">
-        <p><strong>Allums, S.</strong> (2024). Teaching Social Skills with AI Chat Systems. <em>EdTech Review.</em></p>
-    </div>
-
-</section>
-
-<section id="research" class="container fade-in">
-    <h2>Research</h2>
-
-    <div class="card">
-        <h3>AI & Creativity</h3>
-        <p>Studying how AI tools influence divergent thinking and originality.</p>
-    </div>
-
-    <div class="card">
-        <h3>Social Skills & AI</h3>
-        <p>Designing AI-driven chat environments to improve empathy and communication.</p>
-    </div>
-
-</section>
-
-<section id="teaching" class="container fade-in">
-    <h2>Teaching</h2>
-
-    <div class="card">
-        <h3>English Education (South Korea)</h3>
-        <p>Teaching secondary students with a focus on communication and engagement.</p>
-    </div>
-
-    <div class="card">
-        <h3>Workshops & Curriculum</h3>
-        <p>Developing interactive lessons on AI, media, and language learning.</p>
-    </div>
-
 </section>
 
 <footer>
     <p>© 2026 Sachin Allums</p>
 </footer>
-
-<script>
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-        threshold: 0.15
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-    });
-</script>
 
 </body>
 </html>
