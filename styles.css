@@ -95,12 +95,27 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.25s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
+.card-text {
+    flex: 1;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+}
 /* About */
 .about-content {
     display: flex;
@@ -109,8 +124,7 @@ header {
 }
 
 .profile {
-    width: 150px;
-    border-radius: 50%;
+    width: 400px;
 }
 
 /* Footer */
@@ -163,18 +177,10 @@ ul {
     padding-left: 30px;
 }
 
-h1 {
-    color: #007acc;
-}
-
 /* make hovering over links a softer blue*/
 a {
-    color: #007acc;
+    color: #005791;
     text-decoration: none;
-}
-
-a:visited {
-    color: #007acc;
 }
 
 a:hover {
@@ -184,4 +190,21 @@ a:hover {
 
 a:active {
     color: #007acc;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.home-content p {
+    flex: 1;
+}
+
+.home-content img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
