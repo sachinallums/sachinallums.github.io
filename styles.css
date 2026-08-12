@@ -154,3 +154,34 @@ footer {
     background: #005f99;
     transform: translateY(-2px);
 }
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+h1 {
+    color: #007acc;
+}
+
+/* make hovering over links a softer blue*/
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #007acc;
+}
+
+a:hover {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:active {
+    color: #007acc;
+}
