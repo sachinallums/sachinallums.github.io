@@ -1,1 +1,1 @@
-Current Researcher and Fulbright Scholar. This website is undergoing construction right now, so check back later!
+Current Researcher interested in the learning sciences and cognitive development.
