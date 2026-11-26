@@ -1,1 +1,1 @@
-Current Researcher interested in the learning sciences and cognitive development.
+Current researcher interested in the learning sciences and cognitive development.
